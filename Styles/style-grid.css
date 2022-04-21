@@ -1,0 +1,132 @@
+body{
+    margin: 0; /* margem zero */
+    height: 100vh; /* ocupa 100% da altura no navegador */
+    display: grid; /*informa que usara css grid */
+    font-family:Arial, Helvetica, sans-serif;
+   
+    /* definie as colunas e linhas da pagina */
+    grid-template-areas:
+    "topo topo topo" /* linha ocupada com topo*/
+    "boxL meio boxR" /* linha com tres itens diferentes*/
+    "rodape rodape rodape"; /* linha com 3 itens iguasi*/
+   
+    /*--define o tamanho das linhas
+    linha1 40px
+    linha2 1fr (tamanho flexivel)
+    linha3 60px ultima linha*/
+    grid-template-rows: 60px 1fr 60px;
+   
+    /*--define o tamanho das colunas
+    coluna1 80px
+    coluna2 1fr (tamanho flexivel)
+    coluna3 60px ultima linha*/
+    grid-template-columns: 200px 1fr 200px;
+}
+   
+header {
+
+    grid-area: topo; /*informa que o header vai ficar na area definida acima
+    (topo topo topo) */
+    background: rgb(0, 0, 0);/* cor do header*/
+}
+main {
+    grid-area: meio; /*informa que o (main) vai ficar na area definida acima
+    ( meio) */
+    background: rgb(255, 255, 255);
+}
+/* Mesma ideia para os itens abaixo */
+asideL {
+    grid-area: boxL;
+    background: rgb(84, 236, 109);
+}
+asideR {
+    grid-area: boxR;
+    background: rgb(84, 236, 109);
+}
+footer{
+    grid-area: rodape;
+    background: rgb(0, 0, 0);
+}
+
+#container_a{
+    width: 10%;
+    display: flex;
+    
+    
+}
+
+#container_d p{
+    font-size: 15px;
+    font-family: sans-serif;
+}
+ 
+#container_c h2{
+    margin-left: 80%;
+    font-size: 15px;
+    color: #fff;
+}
+
+#container_a img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    height: 80px;
+    width: 80px;
+    
+}
+#container_a h1{
+    font-size: 25px;
+    margin-left: 15%;
+    color: aliceblue;
+}
+#container_b ul {
+    list-style-type: none;
+    margin: 15px;
+    padding: 0;
+  }
+
+#container_b li{
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+
+#container_e ul {
+    list-style-type: none;
+    margin: 15px;
+    padding: 0;
+}
+
+#container_e a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+#container_e li{
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+
+#container_e h1{
+    font-size: 15px;
+    margin-left: 30%;
+}
+
+.box{
+    margin: 10px;
+    height: 100%;
+    display: inline-block;
+    flex-direction: column;
+}
+.box img{
+    height: 250px;
+    width: 250px;
+}
+.box p{
+    margin-top: 0px;
+    font-size: 20px;
+}
